@@ -1,21 +1,33 @@
-import "./App.css";
 import Button from "./components/Button.jsx";
+import { HiCursorClick } from "react-icons/hi";
 
 function App() {
+  const handleClick = () => {
+    console.log("Clicked");
+  };
   return (
     <>
-      <div class="m-9">
-        <Button>Click Me</Button>
+      <div>
+        <Button primary outline rounded onClick={handleClick}>
+          <HiCursorClick />
+          Click Me
+        </Button>
       </div>
 
       <div>
-        <Button>Buy Now!</Button>
+        <Button secondary outline rounded>
+          Buy Now!
+        </Button>
       </div>
       <div>
-        <Button>See Deal</Button>
+        <Button warning outline rounded>
+          See Deal
+        </Button>
       </div>
       <div>
-        <Button>Hide Ads</Button>
+        <Button danger outline rounded>
+          Hide Ads
+        </Button>
       </div>
     </>
   );
